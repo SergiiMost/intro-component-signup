@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root{
+  --red: #ff7a7a;
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue:hsl(249, 10%, 26%) ;
+  --grayish-blue:hsl(246, 25%, 77%);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+}
+
+/***** Wrappers  *****/
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(./images/bg-intro-desktop.png);
+  background-color: var(--red);
+} 
+
+.content-wrapper{
+  flex: 1;
+  display: flex;
+  max-width: 120rem;
+  align-items: center;
+  margin: 0 auto;
+}
+/***** Wrappers END *****/
+
+/***** Heading *****/
+.heading{
+  flex-basis: 50%;
+  color: white;
+  padding: 2rem;
+}
+
+.heading__main{
+  font-size: 5.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.heading__secondary{
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.heading__main-block{
+  display: block;
+}
+/***** Heading end *****/
+
+/***** Signup form*****/
+.sign-up{
+  flex-basis: 50%;
+  padding: 2rem;
+}
+
+.sign-up__banner{
+  background-color: var(--blue);
+  text-align: center;
+  padding: 1rem ;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 9px 7px 1px rgba(0,0,0,0.24);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.sign-up__banner-light{
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+.form{
+  width: 100%;
+  padding: 4rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 9px 7px 1px rgba(0,0,0,0.24);
+}
+
+.form__input-wrapper{
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.form__input{
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  caret-color: var(--blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.form__input::placeholder{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.form__input:focus{
+  outline: none;
+  border: 1px solid var(--blue);
+}
+
+.form__error{
+  display: none;
+}
+
+.form__error-icon{
+  position: absolute;
+  top: 13px;
+  right: 11px;
+}
+
+.form__error-message{
+  text-align: right;
+  font-size: 1.1rem;
+  font-style: italic;
+  padding-right: .5rem;
+  color: var(--red);
+  font-weight: 500;
+}
+
+.form__button{
+  display: block;
+  width: 100%; 
+  padding: 1.5rem;
+  border-radius: 5px;
+  background-color: var(--green);
+  box-shadow: 0px 4px 0px rgba(50,183, 126);
+  text-transform: uppercase;
+  border: none;   
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.form__button:hover{
+  background-color: hsl(154, 65%, 61%);
+}
+
+.form__legal{
+  font-size: 1.2rem;
+  color: var(--grayish-blue);
+  padding: 2rem 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form__legal-link{
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 600;
+}
+/***** Signup form end *****/
+
+.attribution { 
+  font-size: 1.2rem; 
+  text-align: center; 
+  padding: 1.5rem;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:1000px){
+  .heading__main{
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width:700px){
+  html{
+    font-size: 56.25%;
+  }
+
+  .content-wrapper{
+    flex-direction: column;
+  }
+  .heading__main{
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .heading__secondary{
+    max-width: 48rem;
+    text-align: center;
+  }
+  .form{
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width:375px){
+  .page-wrapper{
+    background-image: url(./images//bg-intro-mobile.png);
+  }
+}
