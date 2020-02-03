@@ -1,4 +1,4 @@
-# Frontend Mentor - Four card feature section
+# Frontend Mentor Challenge - Intro component with sign-up form
 
 ![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
 
